@@ -898,6 +898,43 @@ For that, do the steps:
 
 Now create a new pull request and see that the only option for merging is `Rebase and merge`.
 
+## Tag a Release
+
+A **tag** marks a specific commit in history, usually to flag a release or version (for example `v1.0`).
+Unlike a branch, a tag does not move - it always points to the same commit.
+
+1. Create an annotated tag on the current commit:
+
+   ```console
+   git tag -a v1.0 -m "First release of the C Bye application"
+   ```
+
+1. List the tags and inspect one:
+
+   ```console
+   git tag
+   git show v1.0
+   ```
+
+1. Push the tag to GitHub (tags are **not** pushed by `git push` by default):
+
+   ```console
+   git push origin v1.0
+   ```
+
+   To push all your tags at once, use `git push origin --tags`.
+
+1. In the web view of your GitHub repository, go to the `Tags` / `Releases` section.
+   You will see the `v1.0` tag.
+   From there you can also turn a tag into a published `Release`.
+
+To delete a tag (locally and on GitHub), use:
+
+```console
+git tag -d v1.0
+git push origin --delete v1.0
+```
+
 ## Collaborate with GitHub
 
 GitHub shines for collaborative / team work.
