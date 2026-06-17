@@ -12,6 +12,56 @@ cd workshop-github/
 
 And let's get going! 🚀
 
+## Set Up GitHub
+
+Let's set up GitHub for proper use.
+
+### Add Your Public SSH Key
+
+If you haven't already, add your public SSH key to your GitHub account.
+Follow the instructions [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
+
+### Create a Personal Access Token
+
+Create a personal access token to use as an authentication mechanism for GitHub.
+Follow the instructions [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
+Add **all permissions** to the personal access token.
+
+## Set Up GitHub CLI
+
+Follow the instruction [here](https://cli.github.com/) and install GitHub CLI.
+
+Authenticate to GitHub:
+
+```console
+gh auth login
+```
+
+Use the username and the personal access token above to authenticate.
+
+## Create Work GitHub Repository
+
+Let's first create a work GitHub repository based on the current repository.
+We will use it for toying around, messing it up and fixing it.
+
+First, make sure you are in the local directory clone of this repository (`workshop-github`).
+Then, create a repository on GitHub from the command line (using GitHub CLI - `gh`):
+
+```console
+./gh-create-repo.sh
+```
+
+Check your repository on GitHub using a web browser.
+
+Your repository is now available as the `upstream` remote.
+Check your remotes:
+
+```console
+git remote show
+git remote show origin
+git remote show upstream
+```
+
 # Git Advanced
 
 > [!NOTE]
@@ -690,56 +740,6 @@ Select pull requests that have been authored by `michpappas`.
 Select pull requests that are to be reviewed by `michpappas`.
 
 Select pull requests that use the `area/plat` label.
-
-## Set Up GitHub
-
-Let's set up GitHub for proper use.
-
-### Add Your Public SSH Key
-
-If you haven't already, add your public SSH key to your GitHub account.
-Follow the instructions [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
-
-### Create a Personal Access Token
-
-Create a personal access token to use as an authentication mechanism for GitHub.
-Follow the instructions [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
-Add **all permissions** to the personal access token.
-
-## Set Up GitHub CLI
-
-Follow the instruction [here](https://cli.github.com/) and install GitHub CLI.
-
-Authenticate to GitHub:
-
-```console
-gh auth login
-```
-
-Use the username and the personal access token above to authenticate.
-
-## Create Work GitHub Repository
-
-Let's first create a work GitHub repository based on the current repository.
-We will use it for toying around, messing it up and fixing it.
-
-First, make sure you are in the local directory clone of this repository (`workshop-github`).
-Then, create a repository on GitHub from the command line (using GitHub CLI - `gh`):
-
-```console
-./gh-create-repo.sh
-```
-
-Check your repository on GitHub using a web browser.
-
-Your repository is now available as the `upstream` remote.
-Check your remotes:
-
-```console
-git remote show
-git remote show origin
-git remote show upstream
-```
 
 ## Create Pull Requests
 
