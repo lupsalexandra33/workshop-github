@@ -696,7 +696,7 @@ Edit the commit history on the `test` branch so the commits are in the correct o
 > If, at any point in time, you miss a command, or something bad simply happened, reset the environment by running:
 >
 > ```console
-> ./gh-reset-repo.sh
+> ./reset-all.sh --github
 > ```
 
 > [!IMPORTANT]
@@ -783,7 +783,7 @@ We do the steps:
    Reset before each step:
 
    ```console
-   ./gh-reset-repo.sh
+   ./reset-all.sh --github
    ```
 
 1. Do the same steps as above for the `cpp-bye` and `python3-bye` programs in the `support/` directory.
@@ -814,7 +814,7 @@ For that, in the GitHub web interface for the pull request follow the steps:
 1. Now reset the repository:
 
    ```console
-   ./gh-reset-repo.sh
+   ./reset-all.sh --github
    ```
 
    and redo the pull requests, and merge them again.
@@ -832,7 +832,7 @@ In order to approve a pull request, you need to have another user able to approv
 Before everything, reset the repository:
 
 ```console
-./gh-reset-repo.sh
+./reset-all.sh --github
 ```
 
 And create the pull request, as above.
@@ -862,7 +862,7 @@ We want to enforce an approval for our pull requests.
 Before everything, reset the repository:
 
 ```console
-./gh-reset-repo.sh
+./reset-all.sh --github
 ```
 
 And create the pull request, as above.
@@ -943,7 +943,7 @@ For this, work in pairs of two.
 Before this, do a reset of your repository:
 
 ```
-./gh-reset-repo.sh
+./reset-all.sh --github
 ```
 
 Each of you should do the following:
